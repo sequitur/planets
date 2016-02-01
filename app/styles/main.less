@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,700);
+
+@default-bg: black;
+@default-text: white;
+
+html,body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  background: @default-bg;
+  color: @default-text;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: .5rem 0 1rem;
+
+  &>small {
+    color: #a0a0a0;
+    font-size: 70%;
+  }
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  height: 10vh;
+  padding: 1rem 2rem;
+  h1 {
+    margin: 0;
+  }
+}
+
+.container {
+  height: 90vh;
+}
+
+.desc {
+  position: absolute;
+  top: 10vh;
+  width: 20rem;
+  margin-left: 2rem;
+  font-size: 1.2rem;
+
+  p {
+    margin: 0;
+    font-size: .9rem;
+    color: white;
+
+    &.factoid {
+      font-size: 1rem;
+      margin-top: 1rem;
+      font-weight: 400;
+    }
+  }
+
+}
+
+@keyframes generating {
+  from {
+    color: inherit;
+  }
+  to {
+    color: #f04010;
+  }
+}
+
+.generating {
+  font-size: 2rem;
+  text-shadow: 2px 2px 2px black;
+  position: fixed;
+  top: 50vh;
+  left: 45vw;
+  animation: generating .5s ease infinite alternate;
+}
+
+@keyframes fadeaway {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.instruction {
+  position: fixed;
+  top: 70vh;
+  left: 25vw;
+  font-size: 3vw;
+  animation: fadeaway 5s both;
+  cursor: default;
+}
